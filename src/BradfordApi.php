@@ -4,10 +4,23 @@ namespace FredBradley\BradfordApi;
 
 use GuzzleHttp\Client;
 
+/**
+ * Class BradfordApi
+ * @package FredBradley\BradfordApi
+ */
 class BradfordApi
 {
+    /**
+     * @var Client
+     */
     protected $client;
 
+    /**
+     * BradfordApi constructor.
+     * @param string $url
+     * @param string $username
+     * @param string $password
+     */
     public function __construct(string $url, string $username, string $password)
     {
         $this->client = new Client([
