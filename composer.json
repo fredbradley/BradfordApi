@@ -1,0 +1,42 @@
+{
+    "name": "fredbradley/bradfordapi",
+    "description": "A PHP Wrapper API for Bradford",
+    "keywords": [
+        "fredbradley",
+        "bradfordapi"
+    ],
+    "homepage": "https://github.com/fredbradley/bradfordapi",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Fred Bradley",
+            "email": "hello@fredbradley.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FredBradley\\BradfordApi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FredBradley\\BradfordApi\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
