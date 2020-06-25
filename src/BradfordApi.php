@@ -61,4 +61,36 @@ class BradfordApi
 
         return $decode ? json_decode((string)$response->getBody(), true) : (string)$response->getBody();
     }
+
+    /**
+     * @param string $username
+     * @return mixed|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function findHostsByUsername(string $username)
+    {
+        return $this->getUserDevices([
+            'owner' => $username
+        ]);
+    }
+
+    /**
+     * @param string $macAddress
+     * @return mixed|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getHostbyMacAddress(string $macAddress)
+    {
+        return $this->request("GET", 'host/macaddress/' . strtoupper($macAddress));
+    }
+
+    /**
+     * @param array $searchQuery
+     * @return mixed|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function getUserDevices(array $searchQuery)
+    {
+        return $this->request("GET", "host", [], $searchQuery);
+    }
 }
