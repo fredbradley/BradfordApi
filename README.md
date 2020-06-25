@@ -21,8 +21,8 @@ composer require fredbradley/bradfordapi
 $api = new \FredBradley\BradfordApi\BradfordApi("https://server.tld", "username", "password");
 $api->request("GET", "host", [], ['owner' => 'myuser']);
 // this will give you a JSON object of hosts where the owner equqals myuser
-
 ```
+More helper functions will be added in due course, but this will get you going. 
 
 ### Testing
 
