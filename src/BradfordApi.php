@@ -47,8 +47,8 @@ class BradfordApi
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function request(
-        $method,
-        $uri = '',
+        string $method,
+        string $uri = '',
         array $json = [],
         array $query = [],
         array $options = [],
