@@ -27,11 +27,11 @@ class BradfordApi
             'base_uri' => $url,
             'auth' => [
                 $username,
-                $password
+                $password,
             ],
             'headers' => [
-                'Accept' => 'application/json'
-            ]
+                'Accept' => 'application/json',
+            ],
         ]);
     }
 
@@ -42,7 +42,7 @@ class BradfordApi
      * @param array $json
      * @param array $query
      * @param array $options
-     * @param boolean $decode JSON decode response body (defaults to true).
+     * @param bool $decode JSON decode response body (defaults to true).
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
@@ -56,7 +56,7 @@ class BradfordApi
     ) {
         $response = $this->client->request($method, $uri, array_merge([
             'json' => $json,
-            'query' => $query
+            'query' => $query,
         ], $options));
 
         return $decode ? json_decode((string)$response->getBody(), true) : (string)$response->getBody();
@@ -70,7 +70,7 @@ class BradfordApi
     public function findHostsByUsername(string $username)
     {
         return $this->getUserDevices([
-            'owner' => $username
+            'owner' => $username,
         ]);
     }
 
