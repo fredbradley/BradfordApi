@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fredbradley/bradfordapi.svg?style=flat-square)](https://packagist.org/packages/fredbradley/bradfordapi)
 [![Build Status](https://img.shields.io/travis/fredbradley/bradfordapi/master.svg?style=flat-square)](https://travis-ci.org/fredbradley/bradfordapi)
-[![Quality Score](https://img.shields.io/scrutinizer/g/fredbradley/bradfordapi.svg?style=flat-square)](https://scrutinizer-ci.com/g/fredbradley/bradfordapi)
 [![Total Downloads](https://img.shields.io/packagist/dt/fredbradley/bradfordapi.svg?style=flat-square)](https://packagist.org/packages/fredbradley/bradfordapi)
 
 Bradford Api
